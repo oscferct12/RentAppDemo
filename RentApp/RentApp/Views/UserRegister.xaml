@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentApp.Views.UserRegister"
+             Title="Registrar Usuario">
+    <ContentPage.Content>
+        <ScrollView IsVisible="True">
+            <StackLayout BackgroundColor="White">
+                <Label Text="Registrar usuario" TextColor="Black" FontSize="Large" Margin="15"/>
+                <StackLayout Padding="15">
+                    <Label Text="Nombre: " TextColor="Black" FontSize="Large"/>
+                    <Entry x:Name="txtNombre" TextColor="Black" 
+                       Placeholder="Ingrese nombre del usuario" 
+                        BackgroundColor="White" FontSize="Medium"/>
+                    <Label Text="Cédula: " TextColor="Black" FontSize="Large"/>
+                    <Entry x:Name="txtCedula" TextColor="Black" 
+                       Placeholder="Ingrese cédula" 
+                        BackgroundColor="White" FontSize="Medium"/>
+                    <Label Text="Dirección: " TextColor="Black" FontSize="Large"/>
+                    <Entry x:Name="txtDireccion" TextColor="Black" 
+                       Placeholder="Ingrese dirección de domicilio" 
+                        BackgroundColor="White" FontSize="Medium"/>
+                    <Label Text="Teléfono: " TextColor="Black" FontSize="Large"/>
+                    <Entry x:Name="txtTelefono" TextColor="Black" 
+                       Placeholder="Ingrese el teléfono" 
+                        BackgroundColor="White" FontSize="Medium"/>
+                </StackLayout>
+
+                <Button Style="{StaticResource ButtonConfirmation}"
+                        Text="Registrar Usuario" 
+                        VerticalOptions="EndAndExpand"
+                        FontSize="15" 
+                        Clicked="btnRegistrar_Clicked"/>
+                
+                <ActivityIndicator x:Name="Indicador" Color="Green" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label x:Name="lblLoading"  Text="Loading..." HorizontalOptions="Center" TextColor="Green" IsVisible="False"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

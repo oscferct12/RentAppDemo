@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentApp.Views.GetUserByDocument"
+             Title="Consultar por Usuario">
+    <ContentPage.Content>
+        <ScrollView IsVisible="True">
+            <StackLayout BackgroundColor="White">
+                <Label Text="Consultar Detalles Usuario" TextColor="Black" FontSize="Large" Margin="15"/>
+                <StackLayout Padding="15">
+                    <Label Text="Número de cédula: " TextColor="Black" FontSize="Large"/>
+                    <Entry x:Name="txtCedula" TextColor="Black"  
+                       Placeholder="Ingrese número de cédula" 
+                        BackgroundColor="White" FontSize="Medium"/>
+                </StackLayout>
+
+                <Button Style="{StaticResource ButtonConfirmation}"
+                        Text="Consultar" 
+                        VerticalOptions="EndAndExpand"
+                        FontSize="15" 
+                        Clicked="btnConsultarUsuario_Clicked"/>
+               
+                <ActivityIndicator x:Name="indicator" Color="Green" VerticalOptions="Center" HorizontalOptions="Center"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

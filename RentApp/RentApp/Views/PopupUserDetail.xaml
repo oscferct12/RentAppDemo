@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:LocalMessage="clr-namespace:AppSalud.App.Resource.Globalization"
+                 x:Class="RentApp.Views.PopupUserDetail">
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0" Margin="0">
+        <Frame BackgroundColor="White" WidthRequest="270" HeightRequest="400">
+            <ScrollView IsEnabled="True" IsVisible="True" Orientation="Vertical">
+
+                <StackLayout>
+
+                    <StackLayout Padding="5,10,5,20" VerticalOptions="FillAndExpand">
+                        <Label  FontSize="15" HorizontalOptions="Start" 
+                           HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Datos Usuario"/>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+
+                            <Label Text="Cédula :" Grid.Row="0"></Label>
+                            <Label x:Name="lblCedula" Grid.Row="0" Grid.Column="1" 
+                                   FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="12"/>
+                            <Label Text="Nombre :" Grid.Row="1" Grid.Column="0"></Label>
+                            <Label x:Name="lblName" Grid.Row="1" Grid.Column="1"  
+                                   FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="12"/>
+                            <Label Text="Teléfono :" Grid.Row="2"></Label>
+                            <Label x:Name="lblTelefono" Grid.Row="2" Grid.Column="1" 
+                                   FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="12"/>
+                            <Label Text="Dirección :" Grid.Row="3"></Label>
+                            <Label x:Name="lblDireccion" Grid.Row="3" Grid.Column="1"  HorizontalTextAlignment="Start" VerticalTextAlignment="Center" 
+                                   FontAttributes="Bold" FontSize="12"/>
+                        </Grid>
+
+                        <Button Style="{StaticResource ButtonConfirmation}"
+                            FontSize="15"
+                            Margin="2" VerticalOptions="EndAndExpand" Text="Consultar Movimientos"
+                            Clicked="btnConsultarMovimientos_Clicked"/>
+
+                    </StackLayout>
+
+                    <StackLayout x:Name="stckMovement" VerticalOptions="FillAndExpand" >
+                        <Label  FontSize="15" HorizontalOptions="Start" 
+                           HorizontalTextAlignment="Start" FontAttributes="Bold" Text="Movimientos"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+
+                            <Label Text="Ingresos Mensuales :" Grid.Row="0"></Label>
+                            <Label x:Name="lblIngresosMensuales" Grid.Row="0" Grid.Column="1" 
+                                   FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="12"/>
+                            <Label Text="Otros Ingresos :" Grid.Row="1" Grid.Column="0"></Label>
+                            <Label x:Name="lblOtrosIngresos" Grid.Row="1" Grid.Column="1"  
+                                   FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="12"/>
+                            <Label Text="Egresos :" Grid.Row="2"></Label>
+                            <Label x:Name="lblEgresos" Grid.Row="2" Grid.Column="1" 
+                                   FontAttributes="Bold" HorizontalTextAlignment="Start" VerticalTextAlignment="Center" FontSize="12"/>
+                            <Label Text="OtrosEgresos :" Grid.Row="3"></Label>
+                            <Label x:Name="lblOtrosEgresos" Grid.Row="3" Grid.Column="1"  HorizontalTextAlignment="Start" VerticalTextAlignment="Center" 
+                                   FontAttributes="Bold" FontSize="12"/>
+                        </Grid>
+
+                        <Button Style="{StaticResource ButtonConfirmation}"
+                            FontSize="15"
+                            Margin="2" VerticalOptions="EndAndExpand" Text="Consultar Declaración"
+                            Clicked="btnConsultarDeclaracion_Clicked"/>
+
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </StackLayout>
+</popup:PopupPage>

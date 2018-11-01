@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RentApp.Views.MovementRegister">
+    <ContentPage.Content>
+        <StackLayout Padding="15">
+            <Label Text="Ingresos Mensuales: " TextColor="Black" FontSize="Medium"/>
+            <Entry x:Name="txtIngresos" TextColor="Black" 
+                       Placeholder="Ingreso Mensual" 
+                        BackgroundColor="White" FontSize="Small"/>
+            <Label Text="Otros Ingresos: " TextColor="Black" FontSize="Medium"/>
+            <Entry x:Name="txtOtrosIngresos" TextColor="Black"  
+                       Placeholder="Otros Ingresos" 
+                        BackgroundColor="White" FontSize="Small"/>
+            <Label Text="Egresos: " TextColor="Black" FontSize="Medium"/>
+            <Entry x:Name="txtEgresos" TextColor="Black" 
+                       Placeholder="Egresos" 
+                        BackgroundColor="White" FontSize="Small"/>
+            <Label Text="Otros Egresos: " TextColor="Black" FontSize="Medium"/>
+            <Entry x:Name="txtOtrosEgresos" TextColor="Black"
+                       Placeholder="Otros Egresos" 
+                        BackgroundColor="White" FontSize="Small"/>
+            <Button Style="{StaticResource ButtonConfirmation}"
+                        Text="Registrar Movimiento" 
+                        VerticalOptions="EndAndExpand"
+                        FontSize="15" 
+                        Clicked="btnRegistrar_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
